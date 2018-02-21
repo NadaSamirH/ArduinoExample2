@@ -1,0 +1,69 @@
+#include "pitches.h" 
+
+
+int C = 7; 
+int D = 8; 
+int E = 9; 
+int F = 10; 
+int G = 11; 
+int A = 12; 
+int B = 13; 
+
+int c[] = {N_C5}; //Plays C Note
+int d[] = {N_D5}; //Plays D Note
+int e[] = {N_E5}; //Plays E Note
+int f[] = {N_F5}; //Plays F Note
+int g[] = {N_G5}; //Plays G Note
+int a[] = {N_A5}; //Plays A Note
+int b[] = {N_B5}; //Plays B Note
+
+int duration(500); 
+
+void setup() {
+  
+  pinMode(C, INPUT_PULLUP);
+  pinMode(D, INPUT_PULLUP);
+  pinMode(E, INPUT_PULLUP);
+  pinMode(F, INPUT_PULLUP);
+  pinMode(G, INPUT_PULLUP);
+  pinMode(A, INPUT_PULLUP);
+  pinMode(B, INPUT_PULLUP);
+}
+
+void loop() {
+  if (digitalRead(C) == LOW) { 
+    for (int Note = 0; Note < 1; Note++) {
+      tone(6, c[Note], duration); 
+    }
+  }
+  if (digitalRead(D) == LOW) {
+    for (int Note = 0; Note < 1; Note++) {
+      tone(6, d[Note], duration); 
+    }
+  }
+  if (digitalRead(E) == LOW) {
+    for (int Note = 0; Note < 1; Note++) {
+      tone(6, e[Note], duration);
+    }
+  }
+  if (digitalRead(F) == LOW) {
+    for (int Note = 0; Note < 1; Note++) {
+      tone(6, f[Note], duration);
+    }
+  }
+  if (digitalRead(G) == LOW) {
+    for (int Note = 0; Note < 1; Note++) {
+      tone(6, g[Note], duration);
+    }
+  }
+  if (digitalRead(A) == LOW) {
+    for (int Note = 0; Note < 1; Note++) {
+      tone(6, a[Note], duration);
+    }
+  }
+  if (digitalRead(B) == LOW) {
+    for (int Note = 0; Note < 1; Note++) {
+      tone(6, b[Note], duration);
+    }
+  }
+}
